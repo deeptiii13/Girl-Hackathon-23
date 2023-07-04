@@ -33,7 +33,7 @@ AI-powered systems provide valuable insights to Govt. agencies for facilitating 
 
 # Technologies Used 
 - Programming Language (Python)
-- Machine Learning Algorithms (Random Forest Classifier, GuassianNB, Prophet)
+- Machine Learning Algorithms (Random Forest Classifier, GuassianNB, Prophet, YOLO)
 - Natural Language Processing (NLTK)
 - Frameworks (Tensorflow)
 - Virtual Environment (Google Colaboratory)
@@ -65,7 +65,7 @@ The experience in research provided an easier start to approach the problem stat
 
 **Data** 
 
-IndianEarthquakeData.csv: The National Center for Seismology is the nodal agency of the Government of India for monitoring earthquake activity in the country. NCS maintains the National Seismological Network of 115 stations each having state of art equipment and spreading all across the country.NCS monitors earthquake activity all across the country through its 24x7 round-the-clock monitoring center. NCS also monitors earthquake swarm and aftershock through deploying a temporary observatory close to the affected region. This dataset includes a record of the date, time, location, depth, magnitude, and source of every Indian earthquake since 2018.
+[IndianEarthquakeData.csv](https://www.kaggle.com/datasets/parulpandey/indian-earthquakes-dataset2018-onwards?resource=download): The National Center for Seismology is the nodal agency of the Government of India for monitoring earthquake activity in the country. NCS maintains the National Seismological Network of 115 stations each having state of art equipment and spreading all across the country.NCS monitors earthquake activity all across the country through its 24x7 round-the-clock monitoring center. NCS also monitors earthquake swarm and aftershock through deploying a temporary observatory close to the affected region. This dataset includes a record of the date, time, location, depth, magnitude, and source of every Indian earthquake since 2018.
 
 **Model**
 
@@ -90,7 +90,7 @@ pip install seaborn
 
 **Data** 
 
-WeatherData.csv: The dataset includes a record of the date, summary, type of precipitation, temperature, humidity, wind speed, visibility, cloud cover, etc. It allows the identification of patterns followed by natural disasters.
+[WeatherData.csv](https://www.kaggle.com/datasets/muthuj7/weather-dataset?datasetId=6087): The dataset includes a record of the date, summary, type of precipitation, temperature, humidity, wind speed, visibility, cloud cover, etc. It allows the identification of patterns followed by natural disasters.
 
 **Model**
 
@@ -138,11 +138,11 @@ pip install nvidia-cudnn-cu11==8.6.0.163 tensorflow==2.12
 
 **Data** 
 
-tweets.csv: The file contains over 11,000 tweets associated with disaster keywords like “crash”, “quarantine”, and “bush fires” as well as the location and keyword itself. The data structure was inherited from Disasters on social media. The tweets were collected on Jan 14th, 2020.
+[tweets.csv](https://www.kaggle.com/datasets/vstepanenko/disaster-tweets?datasetId=519753): The file contains over 11,000 tweets associated with disaster keywords like “crash”, “quarantine”, and “bush fires” as well as the location and keyword itself. The data structure was inherited from Disasters on social media. The tweets were collected on Jan 14th, 2020.
 
 **Model**
 
-Tensorflow SGD (Gradient descent optimizer): Optimizers are the expanded class, which includes the method to train your machine/deep learning model. Right optimizers are necessary for your model as they improve training speed and performance. It performs redundant computations for bigger datasets, as it recomputes gradients for the same example before each parameter update. It performs frequent updates with a high variance that cause the objective function to fluctuate heavily as as shown in below image:
+Tensorflow SGD (Gradient descent optimizer): Optimizers are the expanded class, which includes the method to train your machine/deep learning model. Right optimizers are necessary for your model as they improve training speed and performance. It performs redundant computations for bigger datasets, as it recomputes gradients for the same example before each parameter update. It performs frequent updates with a high variance that cause the objective function to fluctuate heavily.
 
 
 **Dependencies**
@@ -156,6 +156,37 @@ pip install seaborn
 pip install nvidia-cudnn-cu11==8.6.0.163 tensorflow==2.12
 pip install --user -U nltk
 ```
+
+4. **Aerial Object Detection**: It employs AI-based computer vision algorithms to analyze aerial imagery for the detection and identification of hazards, such as damaged infrastructure, blocked roads, or stranded individuals, to assist in disaster assessment and response planning.
+<p align="center">
+<img width="320" alt="Screenshot 2023-07-04 at 6 52 24 AM" src="https://github.com/deeptiii13/Girl-Hackathon-23/assets/103764966/608e958a-f4bd-4e67-be8d-c00e5b4d6a4e">
+</p>
+
+**Data** 
+
+[Aerial Images Object Detection (Ortophotos of São Paulo city in 2017)](https://www.kaggle.com/datasets/andasampa/ortofotos-2017-rgb): The dataset was developed in 2017 in São Paulo. It allows the aerial detection of objects in the image.
+
+**Model**
+
+YOLOv5: YOLOv5 is an advanced object detection model that builds upon the success of previous YOLO (You Only Look Once) versions. It is designed to accurately and efficiently detect objects in real-time applications. YOLOv5 introduces various improvements, including a streamlined architecture, a focus on model size reduction, and enhanced performance. It utilizes deep convolutional neural networks to analyze input images, predict bounding boxes, and classify objects within those boxes. With its efficient design and improved accuracy, YOLO v5 has become a popular choice for object detection tasks in computer vision applications.
+
+
+**Dependencies**
+
+```
+pip install numpy
+pip install pandas
+pip install matplotlib
+pip install -U scikit-learn
+pip install seaborn
+pip install nvidia-cudnn-cu11==8.6.0.163 tensorflow==2.12
+%cd yolov5
+%pip install -qr requirements.txt
+pip install -q kaggle
+pip install rasterio
+```
+
+
 
 # References
 
